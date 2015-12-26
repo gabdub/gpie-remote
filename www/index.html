@@ -1,0 +1,311 @@
+<html>
+<head>
+ <title>My Site</title>
+ <meta name="viewport" content= "width=device-width,initial-scale=1,maximum-scale=1">
+ <style>
+.resp
+{
+ font-family:Verdana, Arial;
+ color:DarkRed;
+ font-size: 14px;
+ font-weight: 700;
+ text-decoration: none;
+ text-align: left;
+ padding: 5 5 5 5;
+}
+.rev
+{
+ font-family:Verdana, Arial;
+ color:White;
+ background-color:DarkRed;
+ font-size: 14px;
+ font-weight: 400;
+ text-decoration: none;
+ text-align: left;
+ padding: 10 10 10 10;
+ vertical-align: top;
+}
+.rev2
+{
+ font-family:Verdana, Arial;
+ color:White;
+ background-color:#A02020;
+ font-size: 14px;
+ font-weight: 400;
+ text-decoration: none;
+ text-align: left;
+ padding: 10 10 10 10;
+ vertical-align: top;
+}
+.tabs
+{
+ padding: 5 5 5 5;
+}
+.typer
+{
+ font-family:Verdana, Arial;
+ color:White;
+ background-color:DarkRed;
+ font-size: 14px;
+ font-weight: 400;
+ text-decoration: none;
+ text-align: left;
+ padding: 10 10 10 10;
+ vertical-align: top;
+ width: 185;
+}
+.canv
+{
+ background-color:#A02020;
+ position:relative;
+ margin:0 auto;
+ width:280px;
+}
+table.center{
+ position:relative;
+ margin: 0 auto;
+ width:282px;
+}
+@media screen and (max-width:450px)
+{
+ div#ventana{
+  width: 100%;
+ }
+}
+img{
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ width:48px;
+ height:48px;
+}
+</style>
+</head>
+<body bgcolor="#C0C0C0" onload="seltab(0);mmove=0;">
+<div id="ventana">
+<table class="center" cellpading=0 cellspacing=0 border=0><tbody>
+ <tr>
+   <td align="center" id="tab0" onclick="seltab(0)"><img src="/keyboard.png" class="tabs"></td>
+   <td align="center" id="tab1" onclick="seltab(1)"><img src="/mouse.png"    class="tabs"></td>
+   <td align="center" id="tab2" onclick="seltab(2)"><img src="/close.png"    class="tabs"></td>
+ </tr>
+</tbody></table>
+
+<!--keyboard-->
+<table class="center" id="keyboard" cellpading=0 cellspacing=0><tbody>
+ <tr>
+   <td class="rev2"><img src="/thunderbird.png" onclick="cmd('th')"></td>
+   <td class="rev2"><img src="/firefox.png"     onclick="cmd('ffox')"></td>
+   <td class="rev2"><img src="/chrome.png"      onclick="cmd('chrome')"></td>
+   <td class="rev2"><img src="/app3.png"        onclick="cmd('app3')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/max.png"    onclick="cmd('pad13')"></td>
+   <td class="rev"><img src="/pause.png"  onclick="cmd('ytk')"></td>
+   <td class="rev"><img src="/app1.png"   onclick="cmd('app1')"></td>
+   <td class="rev"><img src="/app2.png"   onclick="cmd('app2')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/esc.png"    onclick="cmd('pad1')"></td>
+   <td class="rev"><img src="/tab.png"    onclick="cmd('pad2')"></td>
+   <td class="rev"><img src="/up.png"     onclick="cmd('pad3')"></td>
+   <td class="rev"><img src="/pgup.png"   onclick="cmd('pad4')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/back.png"   onclick="cmd('pad5')"></td>
+   <td class="rev"><img src="/left.png"   onclick="cmd('pad6')"></td>
+   <td class="rev"><img src="/center.png" onclick="cmd('pad7')"></td>
+   <td class="rev"><img src="/right.png"  onclick="cmd('pad8')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/F5.png"     onclick="cmd('pad9')"></td>
+   <td class="rev"><img src="/F6.png"     onclick="cmd('pad10')"></td>
+   <td class="rev"><img src="/down.png"   onclick="cmd('pad11')"></td>
+   <td class="rev"><img src="/pgdown.png" onclick="cmd('pad12')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/youtube.png"    onclick="cmd('pad14')"></td>
+   <td class="rev"><img src="/netflix.png"    onclick="cmd('pad15')"></td>
+   <td class="rev"><img src="/googleplus.png" onclick="cmd('pad16')"></td>
+   <td class="rev"><img src="/ln.png"         onclick="cmd('pad17')"></td>
+ </tr>
+ <tr><td class="rev" colspan=3><form onsubmit="return send_txt();">
+ <input class="typer" type="text" name="typer"></form></td>
+ <td class="rev"><button class="rev" type="button" onclick="cmd('top')">top</button></td>
+ </tr>
+</tbody></table>
+
+<!--mouse-->
+<table class="center" id="mouse" cellpading=0 cellspacing=0><tbody>
+ <tr><td colspan="4" class="canv">
+  <canvas id="mousepad" width="270" height="270" class="canv"></canvas>
+ </td></tr>
+ <tr>
+   <td class="rev"><img src="/mouseL.png"     onclick="cmd('click1')"></td>
+   <td class="rev"><img src="/mouse2L.png"    onclick="cmd('click2')"></td>
+   <td class="rev"><img src="/mouseR.png"     onclick="cmd('click3')"></td>
+   <td class="rev"><img src="/mouserel.png"   onclick="m_rel_abs()" id="mmove"></td>
+ </tr>
+ 
+  <tr>
+   <td class="rev"><img src="/esc.png"    onclick="cmd('pad1')"></td>
+   <td class="rev"><img src="/up.png"     onclick="cmd('pad3')"></td>
+   <td class="rev"><img src="/pgup.png"   onclick="cmd('pad4')"></td>
+   <td class="rev"><img src="/zin.png"    onclick="cmd('pad20')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/left.png"   onclick="cmd('pad6')"></td>
+   <td class="rev"><img src="/center.png" onclick="cmd('pad7')"></td>
+   <td class="rev"><img src="/right.png"  onclick="cmd('pad8')"></td>
+   <td class="rev"><img src="/zout.png"   onclick="cmd('pad21')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/back.png"   onclick="cmd('pad5')"></td>
+   <td class="rev"><img src="/down.png"   onclick="cmd('pad11')"></td>
+   <td class="rev"><img src="/pgdown.png" onclick="cmd('pad12')"></td>
+   <td class="rev"><img src="/pause.png"  onclick="cmd('ytk')"></td>
+ </tr>
+
+<!--close-->
+<table class="center" id="close" cellpading=0 cellspacing=0><tbody>
+ <tr>
+   <td class="rev2"><img src="/thunderbird.png" onclick="cmd('th')"></td>
+   <td class="rev2"><img src="/firefox.png"     onclick="cmd('ffox')"></td>
+   <td class="rev2"><img src="/chrome.png"      onclick="cmd('chrome')"></td>
+   <td class="rev2"><img src="/app3.png"        onclick="cmd('app3')"></td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/closewin.png"  onclick="cmd_close(0,'Close Window?')"></td>
+   <td class="rev"><img src="/closetab.png"  onclick="cmd_close(1,'Close Tab?')"></td>
+   <td class="rev">&nbsp;</td>
+   <td class="rev">&nbsp;</td>
+ </tr>
+ <tr>
+   <td class="rev"><img src="/closewin2.png" onclick="cmd_close(2,'Close Window?')"></td>
+   <td class="rev"><img src="/closetab2.png" onclick="cmd_close(3,'Close Tab?')"></td>
+   <td class="rev">&nbsp;</td>
+   <td class="rev"><img src="/off.png"       onclick="cmd_close(4,'Turn Computer off?')"></td>
+ </tr>
+
+</tbody></table>
+
+<script>
+function cmd_close(n,conftxt) {
+ if(confirm(conftxt)){
+  cmd("pad3"+n);
+ }
+}
+function cmd(cm) {
+  document.getElementById("resp").innerHTML="";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("resp").innerHTML=xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "/cgi-bin/docmd.sh?"+cm, true);
+  xhttp.send();
+}
+function send_txt() {
+ var type=document.getElementsByName("typer")[0].value;
+ document.getElementsByName("typer")[0].value="";
+ if(type){
+  cmd("t-"+type);
+ }
+ return false;
+}
+
+function seltab(k){
+ dk= "none";
+ dm=dk;
+ dc= dk;
+ bk="#808080"
+ bm=bk;
+ bc=bk;
+ if(k==0){
+  dk= "";
+  bk="#800000";
+ }else if(k==1){
+  dm= "";
+  bm="#800000";
+ }else{
+  dc= "";
+  bc="#800000";
+ }
+ document.getElementById("keyboard").style.display= dk;
+ document.getElementById("tab0").style.backgroundColor=bk;
+ document.getElementById("mouse").style.display= dm;
+ document.getElementById("tab1").style.backgroundColor=bm;
+ document.getElementById("close").style.display= dc;
+ document.getElementById("tab2").style.backgroundColor=bc;
+}
+function m_rel_abs() {
+ mmove= 1-mmove;
+ if(mmove==0){
+  document.getElementById("mmove").src="/mouserel.png";
+ }else{
+  document.getElementById("mmove").src="/mouseabs.png";
+ }
+}
+function getMousePolar(canvas, evt) {
+ var rect = canvas.getBoundingClientRect();
+ var x= (evt.clientX-rect.left-140);
+ var y= (140-evt.clientY+rect.top);
+ if(mmove){
+  x*=7;
+  y*=4;
+ }
+ var dist= Math.sqrt(x*x+y*y);
+ var angle= 0;
+ if((x>-2)&&(x<2)){
+  if(y<0){
+   angle= 180;
+  }
+ }else if((y>-2)&&(y<2)){
+  if(x<0){
+   angle= 270;
+  }else{
+   angle= 90;
+  }
+ }else{
+  angle=90-(Math.atan(y/x)*180/Math.PI);
+  if(x<0){
+   angle+=180;
+  }
+  if(angle<0){
+   angle+=360;
+  }
+ }
+ return {a: angle, d: dist};
+}
+
+var canvas=document.getElementById('mousepad');
+var context=canvas.getContext('2d');
+context.beginPath();
+context.moveTo(140,0);
+context.lineTo(140,280);
+context.moveTo(0,140);
+context.lineTo(280,140);
+context.strokeStyle = '#800000';
+context.arc(140, 140, 50, 0, 2 * Math.PI, false);
+context.arc(140, 140, 100, 0, 2 * Math.PI, false);
+context.stroke();
+
+canvas.addEventListener('mouseup',
+ function(evt) {
+  var polar = getMousePolar(canvas, evt);
+  if(mmove){
+   cmd("ma-"+polar.a+","+polar.d);
+  }else{
+   cmd("mr-"+polar.a+","+polar.d);
+  }
+ }, false);
+</script>
+
+<p id="resp" class="resp"></p>
+</div>
+</body>
+</html>
