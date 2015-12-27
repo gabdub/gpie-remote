@@ -75,5 +75,4 @@ There are lots of tutorials on the net about Apache+CGI, here is how I installed
 Since I'm using *NumixCircle* icon theme, several images in the remote control are based or taken from Numix.
 https://github.com/numixproject/numix-icon-theme-circle
 
-
-https://github.com/numixproject/numix-icon-theme-circle
+### See the "screenshots" folder
