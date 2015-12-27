@@ -1,6 +1,6 @@
 # gpie-remote
 **gpie-remote** allows you to control your Linux PC remotely from your cellphone or tablet.
-You can easily adapt it to your needs. Only some basic HTML and BASH scripting knowledge is requiered.
+You can easily adapt it to your needs. Only some basic HTML and BASH scripting knowledge is required.
 The current version uses: *Apache*, *Gnome-Pie*, *xdotool* and *ccsm*, but only a web server and *xdotool* are needed.
 
 
