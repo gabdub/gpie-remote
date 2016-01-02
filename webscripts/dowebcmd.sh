@@ -23,6 +23,8 @@ case $1 in
 "ffox") /bin/bash /home/gabriel/webscripts/firefox.sh ;;
 "chrome") /bin/bash /home/gabriel/webscripts/chrome.sh ;;
 "ytk") /bin/bash /home/gabriel/webscripts/yt_sp.sh ;;
+"clem") /bin/bash /home/gabriel/webscripts/clem.sh ;;
+
 "top")  top -b -n1 | head -n12 ;;
 
 "click1") DISPLAY=:0 /usr/bin/xdotool click 1 ;;
@@ -63,5 +65,11 @@ case $1 in
 "pad32") DISPLAY=:0 /usr/bin/xdotool key --clearmodifiers control+q ;;
 "pad33") DISPLAY=:0 /usr/bin/xdotool key --clearmodifiers control+w ;;
 "pad34") DISPLAY=:0 /usr/bin/xdotool mousemove -p 0 0 key --delay 300 --clearmodifiers ctrl+alt+q o Return ;;
+
+"pad51") DISPLAY=:0 /usr/bin/xdotool key --clearmodifiers XF86AudioPrev ;;
+"pad53") DISPLAY=:0 /usr/bin/xdotool key --clearmodifiers XF86AudioRaiseVolume ;;
+"pad55") DISPLAY=:0 /usr/bin/xdotool key --clearmodifiers XF86AudioPlay ;;
+"pad59") DISPLAY=:0 /usr/bin/xdotool key --clearmodifiers XF86AudioNext ;;
+"pad61") DISPLAY=:0 /usr/bin/xdotool key --clearmodifiers XF86AudioLowerVolume ;;
 esac
 fi

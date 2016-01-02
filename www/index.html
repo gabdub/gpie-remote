@@ -90,7 +90,8 @@ img{
  <tr>
    <td align="center" id="tab0" onclick="seltab(0)"><img src="/keyboard.png" class="tabs"></td>
    <td align="center" id="tab1" onclick="seltab(1)"><img src="/mouse.png"    class="tabs"></td>
-   <td align="center" id="tab2" onclick="seltab(2)"><img src="/close.png"    class="tabs"></td>
+   <td align="center" id="tab2" onclick="seltab(2)"><img src="/mix.png"      class="tabs"></td>
+   <td align="center" id="tab3" onclick="seltab(3)"><img src="/close.png"    class="tabs"></td>
  </tr>
 </tbody></table>
 
@@ -130,7 +131,7 @@ img{
    <td class="rev"><img src="/youtube.png"    onclick="cmd('pad14')"></td>
    <td class="rev"><img src="/netflix.png"    onclick="cmd('pad15')"></td>
    <td class="rev"><img src="/googleplus.png" onclick="cmd('pad16')"></td>
-   <td class="rev"><img src="/ln.png"         onclick="cmd('pad17')"></td>
+   <td class="rev"><img src="/news.png"       onclick="cmd('pad17')"></td>
  </tr>
  <tr><td class="rev" colspan=3><form onsubmit="return send_txt();">
  <input class="typer" type="text" name="typer"></form></td>
@@ -167,6 +168,33 @@ img{
    <td class="rev"><img src="/down.png"   onclick="cmd('pad11')"></td>
    <td class="rev"><img src="/pgdown.png" onclick="cmd('pad12')"></td>
    <td class="rev"><img src="/pause.png"  onclick="cmd('ytk')"></td>
+ </tr>
+
+<!--media-->
+<table class="center" id="media" cellpading=0 cellspacing=0><tbody>
+ <tr>
+   <td class="rev2"><img src="/clementine.png" onclick="cmd('clem')"></td>
+   <td class="rev2">&nbsp;</td>
+   <td class="rev2">&nbsp;</td>
+   <td class="rev2">&nbsp;</td>
+ </tr>
+ <tr>
+   <td class="rev">&nbsp;</td>
+   <td class="rev"><img src="/pgup.png"   onclick="cmd('pad51')"></td>
+   <td class="rev">&nbsp;</td>
+   <td class="rev"><img src="/up.png"     onclick="cmd('pad53')"></td>
+ </tr>
+ <tr>
+   <td class="rev">&nbsp;</td>
+   <td class="rev"><img src="/right.png"  onclick="cmd('pad55')"></td>
+   <td class="rev">&nbsp;</td>
+   <td class="rev">&nbsp;</td>
+ </tr>
+ <tr>
+   <td class="rev">&nbsp;</td>
+   <td class="rev"><img src="/pgdown.png" onclick="cmd('pad59')"></td>
+   <td class="rev">&nbsp;</td>
+   <td class="rev"><img src="/down.png"   onclick="cmd('pad61')"></td>
  </tr>
 
 <!--close-->
@@ -221,9 +249,11 @@ function send_txt() {
 function seltab(k){
  dk= "none";
  dm=dk;
+ dp= dk;
  dc= dk;
  bk="#808080"
  bm=bk;
+ bp=bk;
  bc=bk;
  if(k==0){
   dk= "";
@@ -231,6 +261,9 @@ function seltab(k){
  }else if(k==1){
   dm= "";
   bm="#800000";
+ }else if(k==2){
+  dp= "";
+  bp="#800000";
  }else{
   dc= "";
   bc="#800000";
@@ -239,8 +272,10 @@ function seltab(k){
  document.getElementById("tab0").style.backgroundColor=bk;
  document.getElementById("mouse").style.display= dm;
  document.getElementById("tab1").style.backgroundColor=bm;
+ document.getElementById("media").style.display= dp;
+ document.getElementById("tab2").style.backgroundColor=bp;
  document.getElementById("close").style.display= dc;
- document.getElementById("tab2").style.backgroundColor=bc;
+ document.getElementById("tab3").style.backgroundColor=bc;
 }
 function m_rel_abs() {
  mmove= 1-mmove;
