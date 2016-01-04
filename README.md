@@ -50,9 +50,9 @@ There are lots of tutorials on the net about Apache+CGI, here is how I installed
 
   modify access permissions to **-rwxr-xr-x**
   
-  edit the files and replace **gabriel** with your user name.
+  `sudo chmod 755 /usr/lib/cgi-bin/docmd.sh`
 
-    `sudo chmod 755 /usr/lib/cgi-bin/docmd.sh`
+  edit the files and replace **gabriel** with your user name.
 
 - **Copy scripts:**
   copy files from project folder **webscripts** into **/home/gabriel/webscripts**
