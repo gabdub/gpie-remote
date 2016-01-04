@@ -48,11 +48,13 @@ There are lots of tutorials on the net about Apache+CGI, here is how I installed
 - **Copy CGI files:**
   copy project files from **cgi-bin** into **/usr/lib/cgi-bin**
   modify access permissions to **-rwxr-xr-x**
+  edit the files and replace **gabriel** with your user name.
 
     `sudo chmod 755 /usr/lib/cgi-bin/docmd.sh`
 
 - **Copy scripts:**
   copy files from project folder **webscripts** into **/home/gabriel/webscripts**
+  edit the files and replace **gabriel** with your user name.
 
 - **Allow to execute "dowebcmd.sh" with a different user**
     `sudo visudo`
@@ -60,6 +62,7 @@ There are lots of tutorials on the net about Apache+CGI, here is how I installed
   and add this line to the end of the *visudo* file:
 
     `www-data ALL=(gabriel) NOPASSWD: /home/gabriel/webscripts/dowebcmd.sh`
+    (don't forget to replace **gabriel** with your user name)
 
 ### gnome-pie
 *gnome-pie* is used to launch programs and do some predefined actions.
