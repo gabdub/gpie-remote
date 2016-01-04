@@ -47,7 +47,9 @@ There are lots of tutorials on the net about Apache+CGI, here is how I installed
 
 - **Copy CGI files:**
   copy project files from **cgi-bin** into **/usr/lib/cgi-bin**
+
   modify access permissions to **-rwxr-xr-x**
+  
   edit the files and replace **gabriel** with your user name.
 
     `sudo chmod 755 /usr/lib/cgi-bin/docmd.sh`
